@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Arrays and Loops Application</title>
+    <link href="CSS/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="CSS/styling.css" type="text/css" rel="stylesheet">
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/jquery.js"></script>
+    <script src="JS/script.js"></script>
+  </head>
+  <body class="container-fluid">
+
+    <!-- Header Syntax -->
+
+    <div id="header" class="container-fluid">
+      <h1 id="pingpong">PING PONG</h1>
+    </div>
+
+    <!-- main content wrapper - DEsigned as a row housing two collumns -->
+
+    <div class="row">
+      <div class="col-md-4" id="aboutpingpong">
+        <h3>About Ping Pong</h3> <br>
+        <h3 class="aboutcream">Created by</h4><br>
+        <h4>Kit Fisto<h4><br>
+        <h3 class="aboutcream">GitHub Username/URL:<h3><br>
+        <h4 id="greensaber-username-color">greensaber</h4><br>
+        <h3 class="aboutcream">Level 2 Test For:<h3><br>
+        <h4>Java</h4>
+      </div>
+
+      <!-- JavaScript Arrays and Loops Application area -->
+
+
+      <div class="col-md-8" id="mainwrapper">
+        <h1>Let's Play!</h1><br>
+        <h3>Rules:</h3><br>
+        <p>Ping Pong will count up to your number from 1 with the following exceptions: <br>
+          <ol>
+            <li>Numbers Diviscible by 3 become "ping"</li>
+            <li>Numbers Diviscible by 5 become "pong"</li>
+            <li>Numbers Diviscible by 3 and 5 become "pingpong" </li>
+          </ol>
+        </p>
+        <strong>Enter your number here :</strong>
+        <input type="number" value="1" id="input">
+        <input type="submit" value="Ping Pong" id="pin">
+      </div>
+
+    </div>
+  </body>
+</html>
