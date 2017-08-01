@@ -1,0 +1,30 @@
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#header{
+  height: 250px;
+  text-align: center;
+  background-color: #ada57b;
+  font-weight: bolder;
+}
+#pingpong{
+  font-weight: bold;
+  font-size: 60px;
+  padding-top:4%;
+}
+#aboutpingpong{
+  width: 350px;
+  height: 600px;
+  background-color: #86e089;
+  padding: 30px;
+}
+.aboutcream{
+  color: #efedb6;
+}
+#greensaber-username-color{
+  color: #067296;
+}
+#mainwrapper{
+  padding-left: 70px;
+}
