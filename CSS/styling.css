@@ -28,3 +28,6 @@
 #mainwrapper{
   padding-left: 70px;
 }
+.displayResults{
+  list-style: none;
+}
