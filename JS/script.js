@@ -66,13 +66,13 @@ return results;                                       // dispaly the now-populat
 $("#button").click(function() {                 // wrapper holding the object describing the functions triggered by the click function.
   var userNumber = parseInt($("#input").val());   //local innititalisation of the userNumber as the user-entred number
   var results = output(userNumber);               //innitialising the variable "results" ans assigning it the the "output"function (the function used to populate the array in the previous code block) with the input value fromvthe user as the parameter to use
-  var displayResults = $(".displayResults");      //assigning the the area where the results will be displayed a name (calling it by CLASS - this is to be used later to attach append function)
+  var displayResults = $(".displayResults");      //Naming the the area where the results will be displayed and converting it into a function (calling it by CLASS - this is to be used later to attach append function)
   for (var i = 0; i < results.length; i++) {      // loop logic setting the limits to the range of integers that will be be operated on by the above functions
 
 
     // call the objects in the array and display them (append) as a list item called by class through append-function
 
-    displayResults.append('<li>' + results[i] + '</li>');  //the result[i] access the elements stored in the result array and is then listed through the append function
+    displayResults.append('<li>' + results[i] + '</li>');  //the already populated array "result[i]" is appended to the list referenced above by it's class-name
   }
 });
 
