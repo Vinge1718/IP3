@@ -27,14 +27,23 @@ var divisibilityTest = function(userNumber){
     return userNumber;
   }
 };
-/*
-  function pingpong() {
-    $("")
 
+// Creating the storage (memory/array) in which the results/output will be stored as the function above generates them
 
-    $("#mainwrapper").append(result);
+var output = function(userNumber) {                        //innitialising/ naming the function that is supposed to incrementally
+  var results = [];                                                                 //innitalising an empty array with the name results
+
+  for (var defaultNumber = 1; defaultNumber <= userNumber; defaultNumber++){
+    results.push(divisibilityTest(defaultNumber));
   }
-*/
+return results;
+};
 
+
+// prompt the ping pong action from the onlick function imposed on the input button
+$("#button").click(function){
+  var results = output(userNumber);
+  var
+}
 
 });
