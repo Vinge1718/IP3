@@ -3,8 +3,8 @@
 
 
 
-$(document).ready(function(){
 
+$(document).ready(function(){
 
 /*creating a function that is going to test out the user input number
 (Note the use of type-Number input field to control user input data-type)
@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 
 //innitialising/assigning the function a reference term (a.k.a - naming)
-var divisibilityTest = function(i){
+var divisibilityTest = function(i){           // this declaration is local
 
 
 
@@ -66,11 +66,6 @@ var pingPongTest = function(i) {
 
 
 
-
-
-
-
-
 // Creating the storage (memory/array) in which the results/output will be stored as the function above generates them
 
 var output = function(input) {                        //innitialising/ naming the function that is supposed to incrementally
@@ -83,7 +78,12 @@ return results;                                       // dispaly the now-populat
 };
 
 
+
+
+
 //FRONT END LOGIC
+
+
 
 
 
