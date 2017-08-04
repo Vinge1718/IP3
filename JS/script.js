@@ -1,27 +1,40 @@
+
+//BACK-END / BUSINESS LOGIC
+
+
+
 $(document).ready(function(){
 
 
 /*creating a function that is going to test out the user input number
 (Note the use of type-Number input field to control user input data-type)
 */
+
+
+
 //innitialising/assigning the function a reference term (a.k.a - naming)
 var divisibilityTest = function(i){
+
+
 
 // Multiple Condition testing using the "if...else if" logic
 
   if (i % 3 === 0 && i % 5 === 0){ //combined two logic using the operator and --- the other option is to use fifteen since as shown in the alternative logic loop below
     return "pingpong";
   }
-  else if (i % 3 === 0) {         // remainder text with three
+  else if (i % 3 === 0) {         // remainder test with three set to output the string "ping" if the modulus result is zero
     return "ping";
   }
-  else if (i % 5 === 0) {         // remainder test with five
+  else if (i % 5 === 0) {         // remainder test with five set to output the string "pong" if the modulus result is zero
     return "pong";
   }
   else {
-    return i;                     // default setting
+    return i;                     // default setting to output the user-dealt input if none of the above set conditions are met
   }
 };
+
+
+
 
 //using for loop to display the same result
 /*
@@ -32,12 +45,12 @@ var pingPongTest = function(i) {
  var userNumber = parseFloat($('#userNumber').val());
    for (i = 1; i <= userNumber; i++) {
        if (i % 15 === 0) {
-           document.write ("pingpong<br>");
+           document.write ("pingpong<br>");                         //modulus test combining both the modulus 3 and 5 in one resultant test
            continue;
        };
 
        if (i % 3 === 0) {
-           document.write ("ping<br>");
+           document.write ("ping<br>");                             //same as the related test in the above "else if" code block
            continue;
        };
 
@@ -50,6 +63,14 @@ var pingPongTest = function(i) {
    }
 };
 */
+
+
+
+
+
+
+
+
 // Creating the storage (memory/array) in which the results/output will be stored as the function above generates them
 
 var output = function(input) {                        //innitialising/ naming the function that is supposed to incrementally
@@ -62,6 +83,10 @@ return results;                                       // dispaly the now-populat
 };
 
 
+//FRONT END LOGIC
+
+
+
 // prompt the ping pong action from the click event imposed on the input button
 $("#button").click(function() {                 // wrapper holding the object describing the functions triggered by the click function.
   var userNumber = parseInt($("#input").val());   //local innititalisation of the userNumber as the user-entred number
@@ -72,7 +97,7 @@ $("#button").click(function() {                 // wrapper holding the object de
 
     // call the objects in the array and display them (append) as a list item called by class through append-function
 
-    displayResults.append('<li>' + results[i] + '</li>');  //the already populated array "result[i]" is appended to the list referenced above by it's class-name
+    displayResults.append('<li>' + results[i] + '</li>');  //concatnation of the already populated array "result[i]" to the list and then appended to the div-tag referenced above by it's class-name
   }
 });
 
