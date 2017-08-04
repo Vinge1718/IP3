@@ -15,3 +15,6 @@ A web application that takes a number from a user and returns a range of numbers
 
 ## Set up
 The program can be found [here](https://vinge1718.github.io/IP3/)
+
+## Known Problems
+When applying the 'for-if' logic loop, the output overwrites the DOM
