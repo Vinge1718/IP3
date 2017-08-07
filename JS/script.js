@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 
 //innitialising/assigning the function a reference term (a.k.a - naming)
-var divisibilityTest = function(i){           // this declaration is local
+var divisibilityTest = function(i){           // this declaration is within the ready function
 
 
 
@@ -41,7 +41,7 @@ var divisibilityTest = function(i){           // this declaration is local
 ----USING "FOR" LOOP TO DISPLAY THE SAME RESULT----- but since it has a "document.write" function
 it over-writes the whole DOM in displaying the result and replaces the page sdt-up with your answer.
 
-var pingPongTest = function(i) {
+
  var userNumber = parseFloat($('#userNumber').val());
    for (i = 1; i <= userNumber; i++) {
        if (i % 15 === 0) {
@@ -68,13 +68,13 @@ var pingPongTest = function(i) {
 
 // Creating the storage (memory/array) in which the results/output will be stored as the function above generates them
 
-var output = function(input) {                        //innitialising/ naming the function that is supposed to incrementally
-  var results = [];                                   //innitalising an empty array and naming it results (so to access the array we'll ust call the variable "results")
+var output = function(input) {                        //innitialising or naming the function that is supposed to use "1" as the minimum range limit (as shown in line 74) and the value the user entered (input), innitialise an empty array then populate it.
+  var results = [];                                   //innitalising an empty array and naming it results (so to access the array we'll just call its variable name "results")
 
   for (var i = 1; i <= input; i++) {
-    results.push(divisibilityTest(i));                // using the push method to add elements to the "results-array" innitialised above through calling the divisibility-test function
+    results.push(divisibilityTest(i));                // using the push method to add items/elements to the "results-array" innitialised above. Through calling the divisibility-test function to act as a filter to the value entered by the user (tester)
   }
-return results;                                       // dispaly the now-populated array
+return results;                                       // output the now-populated array
 };
 
 
@@ -89,6 +89,8 @@ return results;                                       // dispaly the now-populat
 
 // prompt the ping pong action from the click event imposed on the input button
 $("#button").click(function() {                 // wrapper holding the object describing the functions triggered by the click function.
+  //enables the refresh-btn to refresh the page.
+	$('.refresh-btn').on('click', function(){location.reload();});
   var userNumber = parseInt($("#input").val());   //local innititalisation of the userNumber as the user-entred number
   var results = output(userNumber);               //innitialising the variable "results" ans assigning it the the "output"function (the function used to populate the array in the previous code block) with the input value fromvthe user as the parameter to use
   var displayResults = $(".displayResults");      //Naming the the area where the results will be displayed and converting it into a function (calling it by CLASS - this is to be used later to attach append function)
