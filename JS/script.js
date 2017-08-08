@@ -68,13 +68,13 @@ it over-writes the whole DOM in displaying the result and replaces the page sdt-
 
 // Creating the storage (memory/array) in which the results/output will be stored as the function described above is called WITHIN to generate those results.
 
-var output = function(input) {                        //innitialising or naming the function that is supposed to use "1" as the minimum range limit (as shown in line 74) and the value the user entered (input), innitialise an empty array then populate it.
+function output(input) {                              //innitialising the function that is supposed to introduce an array and populate it through a loop and push functions whilst applying the ping pong test to the looped variables.
   var results = [];                                   //innitalising an empty array and naming it results (so to access the array we'll just call its variable name "results")
 
-  for (var i = 1; i <= input; i++) {
-    results.push(divisibilityTest(i));                // using the push method to add items/elements to the "results-array" from the end of it. The divisibility-test function is called within the push method to act as a filter to evaluate the value entered by the user (acts as a tester)
+  for (var i = 1; i <= input; i++) {                  //using the "for" loop method...where loop is set to start at "1" iterate with increments of "1" and end when the variable is
+    results.push(divisibilityTest(i));                // using the push method to add items/elements to the "results-array" from its end. The divisibility-test function is called within the push method to act as a filter to evaluate the value entered by the user (ping pong tester)
   }
-return results;                                       // output the now-populated array for re-use when called from anothr function.
+return results;                                       // output the now-populated array for re-use when called from anothr function.NOTE( We can't display the array at this point because the parameter "input" is undefined)
 };
 
 
@@ -94,12 +94,12 @@ $(".refresh-btn").on("click", function(){location.reload();});
 // prompt the ping pong action from the click event imposed on the input button
 $("#button").click(function() {                 // wrapper holding the object describing the functions triggered by the click function.
 
-  var userNumber = parseInt($("#input").val());   //local innititalisation of the userNumber as the user-entred number
+  var userNumber = parseInt($("#input").val());   //local innititalisation of the userNumber as the user-entered number
 
    /*innitialising the variable "results" and assigning it the the "output"-function (the function used to populate the array in the last business-logic code block)
    with the input variable from the user (userNumber) as the parameter passed into the function */
 
-  var results = output(userNumber);
+  var results = output(userNumber);               //innitialises the "input" parameter used in the loop (in the function block above) therefore declaring it as the value the user enters... (i.e replacing the "input" paramaeter with the "userNumber" parameter)
   var displayResults = $(".displayResults");      //Naming the the area where the results will be displayed and converting it into a function (calling it by CLASS - this is to be used later to attach append function)
   for (var i = 0; i < results.length; i++) {      // loop logic setting the limits to the range of integers that will be be operated on by the above functions
 
