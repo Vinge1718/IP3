@@ -12,8 +12,8 @@ $(document).ready(function(){
 
 
 
-//innitialising/assigning the function a reference term (a.k.a - naming)
-var divisibilityTest = function(i){           // this declaration is within the ready function
+//innitialising/assigning the function a reference term (a.k.a - naming) NOTE the "return" keyword is used to return the output in order to help re-usability of the results in other functions later on
+var divisibilityTest = function(i){           // this declaration of the function and naming it 'divisibility test'  NOTE:(function divisibilityTest(i){...} - could work as well)
 
 
 
@@ -22,10 +22,10 @@ var divisibilityTest = function(i){           // this declaration is within the 
   if (i % 3 === 0 && i % 5 === 0){ //combined two logic using the operator and --- the other option is to use fifteen since as shown in the alternative logic loop below
     return "pingpong";
   }
-  else if (i % 3 === 0) {         // remainder test with three set to output the string "ping" if the modulus result is zero
+  else if (i % 3 === 0) {         // remainder test with three set to return the string "ping" if the modulus result is zero
     return "ping";
   }
-  else if (i % 5 === 0) {         // remainder test with five set to output the string "pong" if the modulus result is zero
+  else if (i % 5 === 0) {         // remainder test with five set to return  the string "pong" if the modulus result is zero
     return "pong";
   }
   else {
@@ -66,15 +66,15 @@ it over-writes the whole DOM in displaying the result and replaces the page sdt-
 
 
 
-// Creating the storage (memory/array) in which the results/output will be stored as the function above generates them
+// Creating the storage (memory/array) in which the results/output will be stored as the function described above is called WITHIN to generate those results.
 
 var output = function(input) {                        //innitialising or naming the function that is supposed to use "1" as the minimum range limit (as shown in line 74) and the value the user entered (input), innitialise an empty array then populate it.
   var results = [];                                   //innitalising an empty array and naming it results (so to access the array we'll just call its variable name "results")
 
   for (var i = 1; i <= input; i++) {
-    results.push(divisibilityTest(i));                // using the push method to add items/elements to the "results-array" innitialised above. Through calling the divisibility-test function to act as a filter to the value entered by the user (tester)
+    results.push(divisibilityTest(i));                // using the push method to add items/elements to the "results-array" from the end of it. The divisibility-test function is called within the push method to act as a filter to evaluate the value entered by the user (acts as a tester)
   }
-return results;                                       // output the now-populated array
+return results;                                       // output the now-populated array for re-use when called from anothr function.
 };
 
 
