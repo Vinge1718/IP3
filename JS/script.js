@@ -39,7 +39,7 @@ var divisibilityTest = function(i){           // this declaration of the functio
 //using for loop to display the same result
 /*
 ----USING "FOR" LOOP TO DISPLAY THE SAME RESULT----- but since it has a "document.write" function
-it over-writes the whole DOM in displaying the result and replaces the page sdt-up with your answer.
+it over-writes the whole DOM in displaying the result and replaces the page sdt-up with your answer. You can go ahead and debug that if you wish
 
 
  var userNumber = parseFloat($('#userNumber').val());
@@ -68,13 +68,13 @@ it over-writes the whole DOM in displaying the result and replaces the page sdt-
 
 // Creating the storage (memory/array) in which the results/output will be stored as the function described above is called WITHIN to generate those results.
 
-function output(input) {                              //innitialising the function that is supposed to introduce an array and populate it through a loop and push functions whilst applying the ping pong test to the looped variables.
+var output = function(input) {                              //innitialising the function that is supposed to introduce an array and populate it through a loop and push functions whilst applying the ping pong test to the looped variables.
   var results = [];                                   //innitalising an empty array and naming it results (so to access the array we'll just call its variable name "results")
 
   for (var i = 1; i <= input; i++) {                  //using the "for" loop method...where loop is set to start at "1" iterate with increments of "1" and end when the variable is
     results.push(divisibilityTest(i));                // using the push method to add items/elements to the "results-array" from its end. The divisibility-test function is called within the push method to act as a filter to evaluate the value entered by the user (ping pong tester)
-  }
-return results;                                       // output the now-populated array for re-use when called from anothr function.NOTE( We can't display the array at this point because the parameter "input" is undefined)
+  }                                                   //the push and divisibility test will run in every loop till the loop conditions are fulfilled
+return results;                                       // output the now-populated array for re-use when called from anothr function.NOTE( We can't display the array at this point because the parameter "input" is undefined) it will be defined by the user input value
 };
 
 
