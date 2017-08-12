@@ -3,14 +3,9 @@
 
 
 
-
-$(document).ready(function(){
-
 /*creating a function that is going to test out the user input number
 (Note the use of type-Number input field to control user input data-type)
 */
-
-
 
 //innitialising/assigning the function a reference term (a.k.a - naming) NOTE the "return" keyword is used to return the output in order to help re-usability of the results in other functions later on
 var divisibilityTest = function(i){           // this declaration of the function and naming it 'divisibility test'  NOTE:(function divisibilityTest(i){...} - could work as well)
@@ -83,6 +78,7 @@ return results;                                       // output the now-populate
 
 //FRONT END LOGIC
 
+$(document).ready(function(){    //waiting till the DOM has fully loaded in order to fully function with the interface elements
 
 
 //enables the refresh-btn to refresh the page.
