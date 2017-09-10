@@ -6,7 +6,7 @@
     <link href="CSS/styling.css" type="text/css" rel="stylesheet">
     <script src="JS/jquery.js"></script>
     <script src="JS/bootstrap.min.js"></script>
-    <script src="JS/script.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
   </head>
   <body class="container-fluid">
 
@@ -50,15 +50,24 @@
         <input type="submit" value="Ping Pong" id="button">
 <!--The button through which you can referesh the page in order to input another value-->
         <button type="submit" class="refresh-btn"> Refresh </button>
-      </div>
-
+<!--Second form meant to test concatenation-->
+        <br><br><br>
+        <form id="signup">
+            <label for="email">Enter your email:</label>
+            <input id="email" type="text">
+            <button type="submit">Submit</button>
+        </form>
 <!-- Program results will be displayed below. The container-class is used to organise the output layout otherwise it overlows to the sides-->
 
-      <div class="container">
-        <ul class="displayResults" id="gameOutput">
+        <div class="container">
+          <ul class="displayResults" id="gameOutput">
 
-        </ul>
+          </ul>
+        </div>
+
       </div>
+
+
     </div>
   </body>
 </html>
