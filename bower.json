@@ -1,0 +1,22 @@
+{
+  "name": "ping-pong",
+  "description": "## Contributors Njonge Victor K",
+  "main": "index.js",
+  "authors": [
+    "Victor King'e <vinge1718@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Vinge1718/IP3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.18.1"
+  }
+}

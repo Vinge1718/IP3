@@ -1,5 +1,5 @@
 # IP3: Ping Pong Test
-## Arrays and Loops
+## Arrays ,Loops and use of API keys
 
 ## Contributors
 Njonge Victor K
@@ -13,9 +13,11 @@ A web application that takes a number from a user and returns a range of numbers
 2. Numbers divisible by 5 are replaced with "pong"
 3. Numbers divisible by 15 are replaced with "pingpong"
 
+A Link to another page with a simple humidity checker where:
+
+* You will have to sign up for a free account at the [Open Weather Map site](http://openweathermap.org/) where you will be provided with an API key that you can use to access their data after making an AJAX request
+* Create a '.env' file inn the parent directory where you will paste the API key as a string assigned the the variable 'exports.apiKey ' for example `exports.apiKey = api-key-provided`.
+
+
 ## Set up
 The program can be found [here](https://vinge1718.github.io/IP3/)
-
-## Known Problems
-- When applying the 'for-if' logic loop, the output overwrites the DOM
-- Global declaration/innititalisation of the *name* **userNumber** as the _input field_ doesn't work. One has to do it locally at the **click event**.
