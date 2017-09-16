@@ -28,7 +28,8 @@ gulp.task("cssBuild", function(){
   .pipe(sourcemaps.init())
   .pipe(sass())
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest("./build/css"));
+  .pipe(gulp.dest("./build/css"))
+  .pipe(browserSync.stream());
 })
 
 gulp.task("serve", function(){
@@ -38,7 +39,7 @@ gulp.task("serve", function(){
       index: "index.html"
     }
   });
-
+  gulp.watch(["scss/*.scss"], ["cssBuild"]);
   gulp.watch(["js/*.js"], ["jsBuild"]);
   gulp.watch(["bower.jason"], ["bowerBuild"]);
   gulp.watch(["*.html"], ["htmlBuild"]);
@@ -101,6 +102,7 @@ gulp.task("build",["clean"], function(){
     gulp.start("jsBrowserify");
   }
   gulp.start("bower");
+  gulp.start("cssBuild");
 });
 
 gulp.task("jshint", function(){
