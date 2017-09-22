@@ -1,0 +1,11 @@
+.box {
+  background: #d3d3d3;
+  border: 3px solid black;
+  padding: 40px 80px; }
+  .box .button {
+    font-weight: bold;
+    text-align: center;
+    background: #75B975;
+    color: white; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzLmNzcyIsInNvdXJjZXMiOlsic3R5bGVzLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiJGdyYXkgOiAjZDNkM2QzO1xuJGdyZWVuIDogIzc1Qjk3NTtcblxuLmJveHtcbiAgYmFja2dyb3VuZDogJGdyYXk7XG4gIGJvcmRlcjogM3B4IHNvbGlkIGJsYWNrO1xuICBwYWRkaW5nOiA0MHB4IDgwcHg7XG5cbiAgLmJ1dHRvbntcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgYmFja2dyb3VuZDogJGdyZWVuO1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgfVxufVxuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdBLEFBQUEsSUFBSSxDQUFBO0VBQ0YsVUFBVSxFQUpKLE9BQU87RUFLYixNQUFNLEVBQUUsZUFBZTtFQUN2QixPQUFPLEVBQUUsU0FBUyxHQVFuQjtFQVhELEFBS0UsSUFMRSxDQUtGLE9BQU8sQ0FBQTtJQUNMLFdBQVcsRUFBRSxJQUFJO0lBQ2pCLFVBQVUsRUFBRSxNQUFNO0lBQ2xCLFVBQVUsRUFWTCxPQUFPO0lBV1osS0FBSyxFQUFFLEtBQUssR0FDYiJ9 */
